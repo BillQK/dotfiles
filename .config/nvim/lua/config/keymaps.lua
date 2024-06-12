@@ -10,11 +10,12 @@ local opts = { noremap = true, silent = true }
 
 -- exit insert mode with jk
 keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
--- Perusing code faster with K and J
-keymap.set({ "n", "v" }, "<C-k>", "5k", opts)
-keymap.set({ "n", "v" }, "J", "5j", opts)
-keymap.set({ "n", "v" }, "L", "5l", opts)
-keymap.set({ "n", "v" }, "H", "5h", opts)
+
+-- tmux navigation
+keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", opts)
+keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", opts)
+keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", opts)
+keymap.set("n", "<C-l", "<cmd> TmuxNavigateRight<CR>", opts)
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -60,7 +61,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<C-n>", function()
   vim.diagnostic.goto_next()
 end, opts)
 

@@ -21,7 +21,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.elixir" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-    -- import/override with your plugins
+    { import = "lazyvim.plugins.extras.util.gitui" },
     { import = "plugins" },
   },
   defaults = {
