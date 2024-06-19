@@ -3,18 +3,13 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "astro",
-        "cmake",
-        "cpp",
         "css",
         "gitignore",
         "go",
-        "http",
-        "java",
         "rust",
         "elixir",
-        "sql",
-        "svelte",
+        "typescript",
+        "javascript",
       },
     },
     config = function(_, opts)
